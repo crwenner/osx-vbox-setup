@@ -24,15 +24,16 @@ Create your own virtual box for OS X Yosemite (Mac)
    ```
    VBoxManage modifyvm “NAME_OF_VM" --cpuidset 00000001 000306a9 00020800 80000201 178bfbff
    ```
-   This will modift the VM to select the correct CPU.
+   This will modify the VM to select the correct CPU.
 
-5. Now start up the VM and you should see a wall of text followed by the
+5. Now start up the VM. You should see a wall of text followed by the
    setup screen.
 
 6. Once sucessfully powered on, you should see the option to install OS
    X with the only storage option being the iso that was created. Open up
-   Disk Utility and select the virtual Harddrive and erase it with the
-   format as `Mac OS Extended (journaled)` and the Name `Macintosh HD`.
+   Disk Utility (from the apple menu bar) and select the virtual Harddrive
+   and erase it with the format as `Mac OS Extended (journaled)` and the \
+   Name `Macintosh HD`.
 
 7. Close Disk Utility and now you can install OS X on the newly
    formatted HD.
