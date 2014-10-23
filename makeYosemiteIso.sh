@@ -1,4 +1,19 @@
 INSTALL=$1
+LOC=$2
+
+if [ -z "$1" ]; then
+  echo "No arguments supplied - Please provide an OS X Version [Optional location as a parameter]"
+  echo "i.e. ./makeYosemiteIso.sh Mavericks"
+  echo "."
+  echo "or"
+  echo "."
+  echo "./makeYosemiteIso.sh Mavericks /Users/Shared"
+  exit 1
+fi
+
+if [ -z "$2" ]; then
+  LOC="~/Desktop"
+fi
 
 # Mount the installer image
 hdiutil attach /Applications/Install\ OS\ X\ ${INSTALL}.app/Contents/SharedSupport/InstallESD.dmg -noverify -nobrowse -mountpoint /Volumes/install_app
@@ -36,4 +51,4 @@ hdiutil convert /tmp/${INSTALL}.sparseimage -format UDZO -o /tmp/${INSTALL}
 rm /tmp/${INSTALL}.sparseimage
 
 # Rename the ISO and move it to the desktop
-mv /tmp/${INSTALL}* ~/Desktop/${INSTALL}_"$(date +"%m_%d_%y")".iso
+mv /tmp/${INSTALL}* ${LOC}/${INSTALL}_"$(date +"%m_%d_%y")".iso
