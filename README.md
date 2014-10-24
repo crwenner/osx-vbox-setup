@@ -10,7 +10,8 @@ Create your own virtual box for OS X Yosemite (Mac)
 
 2. Next you need to create the iso file. Use the script in this repo
    called makeYosemiteIso.sh. By default it will place the iso file on your
-   desktop. Example usage: ```./makeYosemiteIso.sh Mavericks```
+   desktop. Example usage: 
+   ```./makeYosemiteIso.sh Mavericks```
    or
    ```./makeYosemiteIso.sh Yosemite /Users/Shared```
 
@@ -23,7 +24,7 @@ Create your own virtual box for OS X Yosemite (Mac)
 4. Now you need to open the terminal and navigate to where the new VM you created is located
    and run this command:
    ```shell
-   VBoxManage modifyvm “NAME_OF_VM" --cpuidset 00000001 000306a9 00020800 80000201 178bfbff
+   VBoxManage modifyvm "NAME_OF_VM" --cpuidset 00000001 000306a9 00020800 80000201 178bfbff
    ```
    This will modify the VM to select the correct CPU.
 
