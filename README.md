@@ -9,9 +9,10 @@ Create your own virtual box for OS X Yosemite (Mac)
    another way to get the OS X Yosemite Install App.
 
 2. Next you need to create the iso file. Use the script in this repo
-   called makeYosemiteIso.sh. This will place the iso file on your
-   desktop. If you do not want the desktop to be the location, just edit
-   line 37 of the script.
+   called makeYosemiteIso.sh. By default it will place the iso file on your
+   desktop. Example usage: ```./makeYosemiteIso.sh Mavericks```
+   or
+   ```./makeYosemiteIso.sh Yosemite /Users/Shared```
 
 3. Create VM in virtual box. Select OS X and the appropite system
    information (I selected 64 bit, 4gb of RAM, 25gb of virtual HD space).
